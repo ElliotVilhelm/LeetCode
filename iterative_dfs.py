@@ -27,6 +27,8 @@ GeeksforGeeks.com
 
 
 def iterative_dfs(root):
+    if root is None:
+        return
     # s emulates the run time stack
     s = []  # 1) create an empty stack
     current_node = root  # initialize current node as root
@@ -38,7 +40,7 @@ def iterative_dfs(root):
         print(node.data)
         current_node = node.right
         if current_node is None and len(s) is 0:
-            break
+            return
 
 
 """ Constructed binary tree is
